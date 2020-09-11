@@ -344,7 +344,8 @@ The following table lists the configurable parameters of the Jaeger chart and th
 | `esIndexCleaner.extraSecretMounts` | Additional esIndexCleaner secret mounts | `[]` |
 | `storage.cassandra.env` | Extra cassandra related env vars to be configured on components that talk to cassandra | `cassandra` |
 | `storage.cassandra.cmdlineParams` | Extra cassandra related command line options to be configured on components that talk to cassandra | `cassandra` |
-| `storage.cassandra.existingSecret` | Name of existing password secret object (for password authentication | `nil`
+| `storage.cassandra.existingSecret` | Name of existing password secret object (for password authentication | `nil` |
+| `storage.cassandra.existingSecretKey` | Name of the key in the existing password secret object | `password` |
 | `storage.cassandra.host` | Provisioned cassandra host | `cassandra` |
 | `storage.cassandra.keyspace` | Schema name for cassandra | `jaeger_v1_test` |
 | `storage.cassandra.password` | Provisioned cassandra password  (ignored if storage.cassandra.existingSecret set) | `password` |

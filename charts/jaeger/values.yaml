@@ -27,6 +27,7 @@ storage:
     keyspace: jaeger_v1_test
     ## Use existing secret (ignores previous password)
     # existingSecret:
+    # existingSecretKey: password
     ## Cassandra related env vars to be configured on the concerned components
     extraEnv: []
       # - name: CASSANDRA_SERVERS

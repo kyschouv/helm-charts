@@ -48,7 +48,11 @@ spec:
           {{ end }}
           {{- include "cassandra.env" . | nindent 10 }}
           - name: CQLSH_HOST
+            {{- if .Values.storage.cassandra.port }}
+            value: {{ printf "%s:%s" (include "cassandra.host" .) (.Values.storage.cassandra.port | toString) }}
+            {{- else }}
             value: {{ template "cassandra.host" . }}
+            {{- end }}
           {{ if .Values.storage.cassandra.tls.enabled }}
           - name: CQLSH_SSL
             value: "--ssl"
